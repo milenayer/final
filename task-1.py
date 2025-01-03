@@ -19,6 +19,17 @@ for key, value in name_points.items():
     print(f"Place: {place}, name: {key}, points: {value}")
 
 file = open("2020-2021.csv", "r")
+next(file)
+name_goals = {}
+for line in file:
+    splited_line2 = line.split(",")
+    name_goals[splited_line2[3]] = int(splited_line2[5]) + int(splited_line2[8])
+
+for key, value in name_goals.items():
+    print(f"{key} made {value} goals")
+
+
+
 
 
 
