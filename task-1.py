@@ -23,10 +23,10 @@ next(file)
 name_goals = {}
 for line in file:
     splited_line2 = line.split(",")
-    name_goals[splited_line2[3]] = int(splited_line2[5]) + int(splited_line2[8])
+    name_goals[splited_line2[3]] = [int(splited_line2[5]) + int(splited_line2[8]), int(splited_line2[6]) + int(splited_line2[9])]
 
 for key, value in name_goals.items():
-    print(f"{key} made {value} goals")
+    print(f"{key} made {value[0]} and missed {value[1]} goals")
 
 
 
