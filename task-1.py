@@ -1,4 +1,5 @@
-file = open("2020-2021.csv", "r")
+user_input =input("з якого файлу ви хочете взяти дані: ")
+file = open(f"{user_input}", "r")
 name_info = {}
 next(file)
 for line in file:
@@ -18,7 +19,7 @@ for key, value in name_points.items():
     place +=1
     print(f"Place: {place}, name: {key}, points: {value}")
 
-file = open("2020-2021.csv", "r")
+file = open(f"{user_input}", "r")
 next(file)
 name_goals = {}
 for line in file:
